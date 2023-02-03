@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interagir com Botão</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+             }
+    </style>
 </head>
 <body>
-    <input type="button" value="Clique aqui!" id="clicar">
+    <h1>Interagindo Com o Botão</h1>
+
+    <div id="area" onclick="clicar()" >
+        <input type="button" value="Clique Aqui">
+    </div>
 
     
     <script>
-        
+        function clicar(){
+            var nome = prompt('Qual é o seu nome?')
+            alert(`Olá ${nome}, é um grande prazer em te conhecer!`)
+         }
     </script>
 </body>
 </html>
