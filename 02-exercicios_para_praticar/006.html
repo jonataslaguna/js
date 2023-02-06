@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com Js</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin-bottom: 10px;
+            height: 100px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em Js</h1>
+
+    <input type="button" value="Clique para calcular" onclick="clicar()">
+    
+    <p id="res">O resultado vai aparecer aqui...</p>
+
+    <p id="res2"></p>
+    <p id="res3"></p>
+    <p id="res4"></p>
+    <p id="res5"></p>
+    <p id="res6"></p>
+    <p id="res7"></p>
+    <p id="res8"></p>
+  
+
+    <script>
+        function clicar() {
+            var n = Number(prompt(`Digite um número:`))
+            var raiz = Math.sqrt(n)
+            var int = Math.floor(n)
+            var intp = int + 1
+            var raizc = Math.cbrt(n)
+            var elevado2 = n ** 2
+            var elevado3 = n ** 3
+            res.innerHTML = `O número a ser analisado aqui será o <strong>${n}</strong>`
+            res2.innerHTML = `Seu valor absoluto é <strong>${n}</strong>`
+            res3.innerHTML = `Sua parte inteira: <strong>${int}</strong>`
+            res4.innerHTML = `Valor inteiro mais proximo: <strong>${intp}</strong>`
+            res5.innerHTML = ` Raiz Quadrada: <strong>${raiz}</strong>`
+            res6.innerHTML = `Raiz cubica: <strong>${raizc}</strong>`
+            res7.innerHTML = `O valor de <strong>${n}²</strong> : <strong>${elevado2}</strong>`
+            res8.innerHTML = `O valor de <strong>${n}³</strong> : <strong>${elevado3}</strong>`
+
+            
+        }
+    </script>
+</body>
+</html>

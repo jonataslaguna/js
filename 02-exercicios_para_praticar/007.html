@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com botão</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        input{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Interação com botão</h1>
+ 
+    <input type="button" value="Ação 1" onclick="clicar1()">
+    <input type="button" value="Ação 2" onclick="clicar2()">
+    <input type="button" value="Ação 3" onclick="clicar3()">
+    <input type="button" value="Ação 4" onclick="clicar4()">
+
+
+    <p id="res"></p>
+    
+    <script>
+        function clicar1(){
+          document.getElementById('res')
+          res.innerHTML = `Clicou no botão 1`
+        }
+
+        function clicar2(){
+            document.getElementById('res2')
+            res.innerHTML = 'Clicou no botão 2'
+        }
+
+        function clicar3(){
+            document.getElementById('res3')
+            res.innerHTML = 'Clicou no botão 3'
+        }
+        function clicar4(){
+            document.getElementById('res4')
+            res.innerHTML = 'Clicou no botão 4'
+        }
+    </script>
+</body>
+</html>
