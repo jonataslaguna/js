@@ -21,16 +21,12 @@
     <input type="button" value="Coverter" onclick="clicar()">
     <h2 id="res"></h2>
 
-    <p id="k"></p>
-    <p id="h"></p>
-    <p id="da"></p>
-    <p id="d"></p>
-    <p id="c"></p>
-    <p id="m"></p>
+    <div id="res"></div>
 
     <script>
         function clicar(){
             var a = document.getElementById('conversor')
+            var res = document.querySelector('div#res')
             var n = Number(a.value)
             var km  = n / 1000
             var hm = n / 100
@@ -38,13 +34,13 @@
             var dm = n * 10
             var cm = n * 100
             var mm = n * 1000
-            res.innerHTML= `A distância de ${n} metros, corresponde a...`
-            k.innerHTML = `Em quilômetros(km): <strong>${km}</strong>`
-            h.innerHTML = `Em hectômetros(hm): <strong>${hm}</strong>`
-            da.innerHTML = `Em decâmetros(Dam): <strong>${dam}</strong>`
-            d.innerHTML = `Em decímetros(dm): <strong>${dm}</strong>`
-            c.innerHTML = `Em centímetros(cm): <strong>${cm}</strong>`
-            m.innerHTML = `Em milímetros(mm): <strong>${mm}</strong>`
+            res.innerHTML =`<p>A distância de ${n} metros, corresponde a...</p>`
+            res.innerHTML += `<p>Em quilômetros(km): <strong>${km}</strong></p>`
+            res.innerHTML += `<p>Em hectômetros(hm): <strong>${hm}</strong></p>`
+            res.innerHTML += `<p>Em decâmetros(Dam): <strong>${dam}</strong></p>`
+            res.innerHTML += `<p>Em decímetros(dm): <strong>${dm}</strong></p>`
+            res.innerHTML += `<p>Em centímetros(cm): <strong>${cm}</strong></p>`
+            res.innerHTML += `<p>Em milímetros(mm): <strong>${mm}</strong></p>`
         }
     </script>
 </body>
