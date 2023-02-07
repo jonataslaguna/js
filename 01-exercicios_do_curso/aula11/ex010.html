@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Velocimetro</h1>
+    Velocidade do carro: <input type="number" name="vel" id="vel"> Km/h
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res"></div>
+   
+
+    <script>
+        function clicar(){
+            v = document.querySelector('input#vel')
+            vel = Number(v.value)
+            res.innerHTML = `<p>Sua velocidade é de ${vel}Km/h</p>`
+            res.innerHTML += `<p>Dirija sempre utilizando cinto de segurança.</p>`
+            if(vel > 80){
+                res.innerHTML += `<p>Velocidade acima do permitido. Multado por exesso de velocidade.</p>`
+            } else {
+                res.innerHTML += `<p>Velocidade permitida. Dirija sempre utilizando cinto de segurança</p>.`
+            }
+        }
+    </script>
+</body>
+</html>
