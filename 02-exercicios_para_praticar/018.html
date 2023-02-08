@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a idade</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-size: 1.5em;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando a idade</h1>
+    <p>Digite o ano de nascimento abaixo:</p>
+    <input type="number" name="a" id="a">
+    <input type="button" value="Calcular" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar(){
+            var a = document.querySelector('input#a')
+            var res = document.querySelector('div#res')
+            var ano = Number(a.value)
+            var idade = 2023 - ano
+            res.innerHTML = `Esse ano você vai fazer ou já fez, ${idade} anos`
+
+        }
+    </script>
+    
+</body>
+</html>
