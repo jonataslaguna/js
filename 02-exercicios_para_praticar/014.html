@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin-bottom: 10px;
+            display: block;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Situação do aluno</h1>
+    Nome do aluno:  <input type="text" name="nome" id="nome">
+    Primeira nota: <input type="number" name="n1" id="nota1">
+    Segunda nota: <input type="number" name="n2" id="nota2">
+    <input type="button" value="Analisar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar(){
+            var n = document.querySelector('input#nome')
+            var n1 = (document.querySelector('input#nota1'))
+            var n2 = (document. querySelector('input#nota2'))
+            var nome = (n.value)
+            var a = Number(n1.value)
+            var b = Number(n2.value)
+            var m = (a + b) / 2
+            res = document.querySelector('div#res')
+            res.innerHTML = `<h2>Analisando a situação de ${nome}</h2>`
+            res.innerHTML += `<p>Com as notas ${a} e ${b} a <strong>média é ${m}</strong></p>`
+            if(m > 6){
+                res.innerHTML += `<p>Com a média acima de 6.0, o aluno está <strong>APROVADO</strong></p>`
+            } if(m < 6 && m > 3){
+                res.innerHTML += `<p>Com a média entre 3.0 e 6.0, o aluno está em <strong>RECUPERAÇÃO</strong></p>`
+            } if (m < 3) {
+                res.innerHTML += '<p>Com a média abaixo de 3.0, o aluno está <strong>REPROVADO</strong></p>'
+            }if (m > 10){
+                res.innerHTML = '<p> A média máxima é 10. Verifique os dados digitados</p>'
+            }
+
+        }
+    </script>
+</body>
+</html>

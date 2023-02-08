@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Valor</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maior Valor</h1>
+    Primeiro número: <input type="number" name="n1" id="n1">
+    Segundo número: <input type="number" name="n2" id="n2">
+    <input type="button" value="Pronto" onclick="verificar()">
+    <div id="res"></div>
+    
+    <script>
+        function verificar(){
+            n1 = document.querySelector('input#n1')
+            n2 = document.querySelector('input#n2')
+            res = document.querySelector('div#res')
+            a = Number(n1.value)
+            b = Number(n2.value)
+            res.innerHTML = `<p>Números digitados:<strong> ${a}</strong> e <strong>${b}</strong></p>`
+            if (a > b) {
+                res.innerHTML += `<p>O número <strong>${a}</strong> é maior!</p>`
+            }else {
+                res.innerHTML += `<p>O número <strong>${b}</strong> é maior!</p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>

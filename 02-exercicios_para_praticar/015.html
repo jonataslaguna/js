@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>É Par ou Impar?</h1>
+    Digite um número: <input type="number" name="n" id="n">
+    <input type="button" value="OK" onclick="clicou()">
+    <div id="res"></div>
+
+    <script>
+        function clicou(){
+            n1 = document.querySelector('input#n')
+            n = Number(n1.value)
+            res = document.querySelector('div#res')
+            if (n % 2 == 0){
+                res.innerHTML = `<p>O número ${n} é <strong>Par</strong>!</p>`
+            } else {
+                res.innerHTML = `<p>O número ${n} é <strong>Impar</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
