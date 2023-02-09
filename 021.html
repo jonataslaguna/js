@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de Salário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-size: 1.5em;
+        }
+        
+        input{
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste de salário</h1>
+    Nome: <input type="text" name="nome" id="nome">
+    Salário atual (Bruto): <input type="number" name="sal" id="sal">
+    Anos trabalhados na empresa: <input type="number" name="anos" id="anos">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+
+   <script>
+        function verificar(){
+            var n = document.querySelector('input#nome')
+            var s = document.querySelector('input#sal')
+            var a = document.querySelector('input#anos')
+            var res = document.querySelector('div#res')
+            var anos = Number(a.value)
+            var sal = Number(s.value)
+            var nome = (n.value)
+            if (anos <= 3){
+                var v = 3 * sal / 100 + sal
+                res.innerHTML = `<p>Olá ${nome}, você terá um reajuste de <strong>3%</strong> no salário</p>`
+                res.innerHTML += `Totalizando: <strong>R$${v}</strong>`
+            } if (anos > 3 && anos <=10){
+                var v = 12.5 * sal / 100 + sal
+                res.innerHTML = `<p>Olá ${nome}, você terá um reajuste de <strong>12.5%</strong> no salário</p>`
+                res.innerHTML += `Totalizando: <strong>R$${v}</strong>`
+            } if (anos >= 10){
+                var v = 20 * sal / 100 + sal
+                res.innerHTML = `<p>Olá ${nome}, você terá um reajuste de <strong>20%</strong> no salário</p>`
+                res.innerHTML += `Totalizando: <strong>R$${v}</strong>`
+            }
+        }
+   </script>
+</body>
+</html>

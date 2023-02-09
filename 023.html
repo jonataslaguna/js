@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de Carros</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: rgba(0, 255, 255, 0.349);
+            
+            
+        }
+        input{
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        main{
+            background-color: white;
+            height: 400px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.315);
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Aluguel de Carros</h1>
+        <h2>Cálculo de Serviços:</h2>
+           Tipo de Carro (Popular/Luxo): <input type="text" id="carro">
+           Dias Utilizados: <input type="number" name="dias" id="dias">
+           Quilômetros percorridos: <input type="number" name="km" id="km">
+           <input type="button" value="Calcular" onclick="calcular()">
+           <div id="res"></div>
+        
+           <script>
+            function calcular(){
+               var tipo_carro = document.querySelector('input#carro')
+               var dias_util = document.querySelector('input#dias')
+               var km_perc = document.querySelector('input#km')
+               var res = document.querySelector('div#res')
+               var tipo = (tipo_carro.value)
+               var dias = Number(dias_util.value)
+               var km = Number(km_perc.value)
+              if (km <= 100 && tipo == 'Popular'){
+                    var a = 90 * dias
+                    var b = 0.20 * km
+                    var c = a + b
+                    res.innerHTML = `<p>Valor de dias utilizados: R$${a}</p>`
+                    res.innerHTML += `<p>Valor Quilômetros de percorridos: R$${b}</p>`
+                    res.innerHTML += `<p>Total do Aluguel: R$${c}</p>`
+               }if (km > 100 && tipo == 'Popular'){
+                    var a = 90 * dias
+                    var b = 0.10 * km
+                    var c = a + b
+                    res.innerHTML = `<p>Valor de dias utilizados: R$${a}</p>`
+                    res.innerHTML += `<p>Valor Quilômetros de percorridos: R$${b}</p>`
+                    res.innerHTML += `<p>Total do Aluguel: R$${c}</p>`
+               } if (km <= 200 && tipo == 'Luxo'){
+                    var a = 150 * dias
+                    var b = 0.30 * km
+                    var c = a + b
+                    res.innerHTML = `<p>Valor de dias utilizados: R$${a}</p>`
+                    res.innerHTML += `<p>Valor Quilômetros de percorridos: R$${b}</p>`
+                    res.innerHTML += `<p>Total do Aluguel: R$${c}</p>`
+               }if (km > 200 && tipo == 'Luxo'){
+                    var a = 150 * dias
+                    var b = 0.25 * km
+                    var c = a + b
+                    res.innerHTML = `<p>Valor de dias utilizados: R$${a}</p>`
+                    res.innerHTML += `<p>Valor Quilômetros de percorridos: R$${b}</p>`
+                    res.innerHTML += `<p>Total do Aluguel: R$${c}</p>`
+                }
+            }
+           </script>
+    </main>
+    
+</body>
+</html>

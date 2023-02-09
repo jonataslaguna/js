@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <h1> Índice de Massa Corpórea (IMC)</h1>
+   Altura: <input type="number" name="altura" id="altura">
+   Peso: <input type="number" name="peso" id="peso">
+    <input type="button" value="ok" onclick="ok()">
+    <div id="res"></div>
+
+    <script>
+        function ok(){
+            var altura = document.querySelector('input#altura')
+            var peso = document.querySelector('input#peso')
+            var res = document.querySelector('div#res')
+            var alt = Number(altura.value)
+            var pes = Number(peso.value)
+            var imc = pes / alt ** 2 
+             if (imc < 18.5){
+                res.innerHTML = `<p>Seu <strong>IMC</strong> é <strong>(${imc})</strong>, você está muito abaixo do peso</p>`
+             } if (imc > 18.5 && imc < 24.9){
+                res.innerHTML = `<p>Seu <strong>IMC</strong> é <strong>${imc}</strong>, você está no peso ideal</p>`
+             } if (imc >= 25 && imc <= 29.9){
+                res.innerHTML = `<p>Seu <strong>IMC</strong> é <strong>${imc}</strong>, você está um pouco acima do peso</p>`
+
+             }if (imc >= 30 && imc <= 39.9){
+                res.innerHTML = `<p>Seu <strong>IMC</strong> é <strong>${imc}</strong>, você está em obesidade</p>`
+            }if (imc > 40) {
+                res.innerHTML = `<p>Seu <strong>IMC</strong> é <strong>${imc}</strong>, você está em obesidade grave</p>`
+            }
+             }
+    </script>
+    
+</body>
+</html>

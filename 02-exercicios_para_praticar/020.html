@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocímetro</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Velocímetro</h1>
+    Digite a velocidade: <input type="number" name="vel" id="vel">Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    
+    <script>
+        function verificar(){
+            var a = document.querySelector('input#vel')
+            var res = document.querySelector('div#res')
+            vel = Number(a.value)
+            var m = (vel - 80) * 5
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel}Km/h</strong></p>`
+            if (vel > 80) {
+                res.innerHTML += `<p>Velocidade acima do permitido. <strong>Multado</strong></p>`
+                res.innerHTML += `<p>Será cobrando <strong>R$5</strong> por cada Km acima da velocidade permitida</p>`
+                res.innerHTML += `<p>Total do valor da multa: <strong>R$${m}</strong></p>`
+            }else {
+                res.innerHTML += '<p>Velocidade permitida</p>'
+            }
+        }
+    </script>
+</body>
+</html>
