@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin-bottom: 10px;
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <input type="button" value="Contar de 1 à 10" onclick="op1()">
+    <input type="button" value="Contar de 10 à 1" onclick="op2()">
+    <input type="button" value="Apenas Pares" onclick="op3()">
+    <input type="button" value="Apenas Impares" onclick="op4()">
+    <input type="button" value="Marcar Pares" onclick="op5()">
+    <input type="button" value="Marcar Impares" onclick="op6()">
+    <div id="res"></div>
+
+    <script>
+        var res = document.querySelector('div#res')
+        function op1(){
+            res.innerHTML = ''
+            for(var c=1;c<=10; c++){
+                res.innerHTML += ` ${c}...` 
+            }
+            
+        }
+        function op2(){
+            res.innerHTML = ''
+            for(var c=10;c > 0; c--){
+                res.innerHTML += ` ${c}...` 
+            }
+        }
+        function op3(){
+            res.innerHTML = ''
+            for(var c=1;c<=10;c++){
+                if(c % 2 == 0){
+                    res.innerHTML += ` ${c}...` 
+                }
+            }
+        }
+        function op4(){
+            res.innerHTML = ''
+            for(var c=1;c<=10;c++){
+                if(c % 2 == 1){
+                    res.innerHTML += ` ${c}...` 
+                }
+            } 
+        }
+        function op5(){
+            res.innerHTML = ''
+            for(var c=1;c<=10;c++){
+                if(c % 2 == 0){
+                    res.innerHTML += ` [ ${c} ]...` 
+                }else{
+                    res.innerHTML += `${c}...`
+                }
+            }
+        }
+        function op6(){
+            res.innerHTML = ''
+            for(var c=1;c<=10;c++){
+                if(c % 2 == 1){
+                    res.innerHTML += ` [ ${c} ]...` 
+                }else{
+                    res.innerHTML += `${c}...`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Inteligente</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Contagem Inteligente</h1>
+    <p>Use qualquer valor nas caixas, simule contagens crescentes e regressivas. Use também valores negativos.</p>
+   Inicio: <input type="number" name="inicio" id="inicio">
+   Final: <input type="number" name="fim" id="fim">
+    <input type="button" value="Iniciar" onclick="iniciar()">
+    <div id="res"></div>
+
+    <script>
+        var res = document.querySelector('div#res')
+        function iniciar(){
+            var n1 = document.querySelector('input#inicio')
+            var n2 = document.querySelector('input#fim')
+            var inicio = Number(n1.value)
+            var fim = Number(n2.value)
+            var c = inicio
+            res.innerHTML = ''
+            if(fim > inicio){
+                 while(c <= fim){
+                    res.innerHTML += `<p>${c}...</p>` 
+                    c++ 
+                }
+            }else{
+                 while(c >= fim){
+                    res.innerHTML += `<p>${c}...</p>` 
+                    c-- 
+                }  
+                
+            }
+              
+        }
+    </script>
+    
+</body>
+</html>
