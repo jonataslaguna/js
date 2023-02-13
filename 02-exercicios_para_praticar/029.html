@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            width: 400px;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Fatorial</h1>
+    <p>Escreva um número na caixa a baixo e te mostrarei o Fatorial dele.</p>
+    Número: <input type="number" name="n" id="n">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        var res = document.querySelector('div#res')
+        
+        function calcular(){
+            var n1 = document.querySelector('input#n')
+            var n = Number(n1.value)
+            var c = n
+            var f = 1
+            res.innerHTML = ''
+            while(c > 1){
+                f *=  c
+                c--
+            }
+            res.innerHTML += `O Fatorial de <strong>${n}</strong> é <strong>${f}</strong> `
+        }
+    </script>
+    
+</body>
+</html>

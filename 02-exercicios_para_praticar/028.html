@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+        p{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <p>Escreva um número na caixa a baixo e te mostrarei a tabuada dele.</p>
+    Número: <input type="number" name="n" id="n">
+    <input type="button" value="ok" onclick="iniciar()">
+    <div id="res"></div>
+
+    <script>
+        var res = document.querySelector('div#res')
+        function iniciar(){
+            var n1 = document.querySelector('input#n')
+            var n = Number(n1.value)
+            res.innerHTML = ''
+            res.innerHTML = `<h2>Tabuada do ${n}:</h2>`
+            for(var c=1; c<=10; c++){
+                 var tab = n * c
+                 res.innerHTML += `<strong>${n}</strong> x ${c} = ${tab} <br/>`
+            }
+        }
+    </script>
+</body>
+</html>
