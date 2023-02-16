@@ -4,7 +4,7 @@ num.sort()
 console.log(num)
 console.log(`O vetor tem ${num.length} posições`)
 console.log(`O primeiro valor de vetor é ${num[0]}`)
-let pos = num.indexOf(10) // Onde está localizado o valor 8?
+let pos = num.indexOf(8) // Onde está localizado o valor 8?
 if (pos == -1){
     console.log('O valor não foi encontrado')
 } else {
