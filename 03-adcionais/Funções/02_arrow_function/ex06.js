@@ -1,10 +1,6 @@
-//const str = "jonatas"
-//const arr = str.split('')
-//console.log(arr) 
-
 const contarVogais = (texto) => {
     const textoArray = texto.split('')
-    const vogais = ['a','e','i','o','u','A','E','I','O','U']
+    const vogais = ['a','A','e','E','i','I','o','O','u','U']
     const apenasVogais = []
     for(a in vogais){
         for(b in texto){

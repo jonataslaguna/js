@@ -1,6 +1,12 @@
-function concatena(...palavra){
-    return palavra.join('')
-}
-   
+function maiorNumero(...numeros){
+    let maior = 0
+    for(i in numeros){
+        if(numeros[i] > maior){
+            maior = numeros[i]
+        }
+    }
 
-console.log(concatena('Jimi Hendrix ', 'David Gilmour ', 'Eric Clapton', ' Stevie Ray'))
+    return maior
+}
+
+console.log(maiorNumero(100,50,25,10,200,27))

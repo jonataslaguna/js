@@ -1,5 +1,20 @@
-const cursos = ['HTML','Css',"JavaScript",'PHP',"Phyton","React"]
-cursos.map((elemento,indice)=>{
-    console.log(`O curso ${elemento} está na posição ${indice}`)
-})
+//PARÂMETROS **REST**
+
+/*function soma (...valores){             
+for(i in valores){
+    res += valores[i]
+}
+return res
+
+}*/
+
+function soma (...valores){
+    let res = 0
+    for(i of valores){
+        res += i
+    }
+    return res
+}
+
+console.log(soma(10,5,11,20))
 

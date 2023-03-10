@@ -1,10 +1,14 @@
-const funcaoAnonima = function(...valores){
-    let res = 0
-    for(i of valores){
-        res += i
+let tamanho = function(...palavras){
+    let quantidadeDeCaracIguais 
+    for(a in palavras){
+        for(b in palavras){
+            if(palavras[a].length == palavras[b].length){
+                quantidadeDeCaracIguais = true
+            } else
+              quantidadeDeCaracIguais = false
+        }
     }
-    return res
+    return quantidadeDeCaracIguais
 }
 
-console.log(funcaoAnonima(10,20,87,5,49))
-
+console.log(tamanho('Jonatas','Gustavo'))

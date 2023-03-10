@@ -1,12 +1,10 @@
-function maiorNumero(...numeros){
-    let maior = 0
-    for(i in numeros){
-        if(numeros[i] > maior){
-            maior = numeros[i]
-        }
+const funcaoAnonima = function(...valores){
+    let res = 0
+    for(i of valores){
+        res += i
     }
-
-    return maior
+    return res
 }
 
-console.log(maiorNumero(100,50,25,10,200,27))
+console.log(funcaoAnonima(10,20,87,5,49))
+
