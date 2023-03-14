@@ -1,12 +1,9 @@
-function aluno (nome,nota){
-    this.nome = nota
-    this.nota = nota
-
-    this.dadosAnonimos = function(){
-        setTimeout(function(){
-            
-        })
+const pessoa = {
+    nome: 'Jonatas',
+    idade: 27,
+    apresentar(){
+        console.log(`Meu nome é ${this.nome} e tenho ${this.idade} anos `)
     }
 }
 
-aluno('Jonatas', 10)
+pessoa.apresentar()
